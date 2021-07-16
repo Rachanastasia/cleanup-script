@@ -1,11 +1,12 @@
 #!/bin/bash
 
-
-def cleanup_commit:
-	try:
-		git commit -m 'clean up'
+if git status; then
+	if git commit -m 'clean up'; then
 		git push
 		echo "Pushed cleanup commit to repository"
-	except:
-		echo "Failed to make a cleanup commit in this location"
-cleanup_commit()
+	else
+		echo "Failed to make a cleanup commit because there are no staged files"
+	fi
+else
+	echo "Failed to make a cleanup commit because this is not a git repository"
+fi
