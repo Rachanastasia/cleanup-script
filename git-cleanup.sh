@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if git status; then
-	if git commit -m 'clean up'; then
+	if git commit -m 'removes logs, comments, and unused code'; then
 		git push
 		echo "Pushed cleanup commit to repository"
 	else
