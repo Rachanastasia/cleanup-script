@@ -1,10 +1,8 @@
 #!/bin/bash
 
 if git status; then
-	git status
-
 	read -p "Do you want to stage all files? [ Y / N ] " stage
-		if (false); then # stage all files
+		if (false); then # TODO: fix this conditional based on stage variable
 			echo "Staging all files with `git add -A`"
 			git add -A 
 		else 
