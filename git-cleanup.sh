@@ -8,7 +8,6 @@ if git status; then
 		else 
 			echo "Files were not staged"
 		fi
-
 	if git commit -m 'removes logs, comments, and unused code'; then
 		git push
 		echo "Pushed cleanup commit to repository"
