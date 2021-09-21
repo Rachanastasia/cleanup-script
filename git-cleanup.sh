@@ -2,9 +2,9 @@
 
 if git status; then
 	git status
-	
+
 	read -p "Do you want to stage all files? [ Y / N ] " stage
-		if (true); then # stage all files
+		if (false); then # stage all files
 			echo "Staging all files with `git add -A`"
 			git add -A 
 		else 
